@@ -1,0 +1,28 @@
+
+  <!--<div class="container warning">
+      <h2> Fejlesztés alatt..</h2>
+  </div>-->
+    <!--/.row-->
+
+ 
+    <header>
+      <app-nav-bar></app-nav-bar> 
+    </header>
+    <div class="container" >   
+      <div class="row"> 
+        <section class="col-3">  
+          </section>
+
+        <section class="col-9"> 
+            <div  class="row row-cols-3 d-flex g-4 ">  
+                <div class="col md-6 wow fadeInDown" id="albumItem" data-wow-duration="5000ms" data-wow-delay="600ms" *ngFor="let album of albums">
+                  <app-album-item [album]="album"></app-album-item>   
+                </div> 
+              </div>  
+
+      </section>
+      </div>    
+    </div> 
+
+    <app-footer></app-footer> 
+

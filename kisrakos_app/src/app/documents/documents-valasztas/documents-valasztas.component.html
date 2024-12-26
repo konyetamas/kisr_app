@@ -1,0 +1,93 @@
+<header>
+    <app-nav-bar></app-nav-bar>
+  </header>
+  
+    
+    <mat-tab-group>
+
+      <mat-tab label="Választási szervek" >
+        <div style="height: 50px;"></div>
+        <div class="container">
+          <app-valasztasi-szervek></app-valasztasi-szervek>
+      </div>
+      </mat-tab>
+
+      <mat-tab label="Választási ügyintézés" >
+        <div style="height: 50px;"></div>
+        <div class="container">
+           <a style="cursor: pointer;" href="https://www.valasztas.hu/ugyintezes"> https://www.valasztas.hu/ugyintezes </a> 
+      </div>
+      </mat-tab>
+      <mat-tab label="Választópolgároknak" >
+        <div style="height: 50px;"></div>
+        <div class="container">
+              
+            <ul>
+                <li> <a class="nav-a" href="https://www.valasztas.hu/tajekoztato-plakatok"> Közlemény a szavazés helyéről és idejéről, a szavazás módjáról </a>  </li>
+                <li> <a class="nav-a" href="https://vtr.valasztas.hu/onk2024/valasztopolgaroknak/szavazasi-informaciok/hataridok/?tab=voter"> Választópolgároknak szóló határidők </a>  </li>
+                <li> <a class="nav-a" href="https://www.valasztas.hu/ajanlas-ellenorzes-tajekoztato"> ,,Kit ajánlottam" szolgáltatás </a>  </li>
+            </ul>            
+            <br>
+            <br>
+
+            <p>
+                A választás nem hiteles eredményét tartalmazó tájékoztató adatok a szavazás lezárását követően
+                Tájékoztatás a szavazásnapi jegyzőkönyvek megtekintési rendjéről a szavazás napját követő 3 napban 
+            </p>
+      </div>
+      </mat-tab>
+      <mat-tab label="Jelölteknek" > 
+        <div style="height: 50px;"></div>
+        <div class="container">
+
+            <ul>
+                <li> <a class="nav-a" href="/assets/documents/valasztas2024/Közlemény_jelöltállítás_ajánlásszámok_2024.pdf"> A jelöltek állításához szükséges ajánlások száma </a>  </li>
+                <li> <a class="nav-a" href="https://www.valasztas.hu/nyomtatvanyok-a-valasztasi-eljarasban"> Jelölt- és listaállításhoz szükséges nyomtatványok </a>  </li>
+                <li> <a class="nav-a" href="https://www.valasztas.hu/valasztasi-bizottsag-tagjanak-megbizasa">A megbízott választási bizottsági tag bejelentésére szolgáló nyomtatványok </a>  </li>
+                <li> <a class="nav-a" href="https://www.valasztas.hu/nevjegyzeki-adatok-igenylese"> Névjegyzéki adatszolgáltatásról szóló tájékoztatás </a>  </li>
+            </ul>            
+            <br>
+            <br>      
+        </div>
+      </mat-tab>
+      <mat-tab label="Tájékoztatók" >     
+        <div style="height: 50px;"></div>
+            <div class="container">
+
+            <div class="row"> 
+                <section class="col-3">  
+                </section>
+                <section class="col-9"> 
+                    <div  class="row row-cols-3 d-flex g-4 ">  
+                    <div class="col md-6 wow fadeInDown" id="albumItem" data-wow-duration="1000ms" data-wow-delay="600ms" 
+                    *ngFor="let document of documents">
+                            <app-document-item [document]="document"></app-document-item>
+                        </div>
+                        </div>                               
+                </section>
+            </div>
+
+
+            <div class="row"> 
+              <h2>Jelöltek</h2> 
+
+              <section class="col-3">  
+              </section>
+              <section class="col-9"> 
+                  <div  class="row row-cols-3 d-flex g-4 ">  
+                  <div class="col md-6 wow fadeInDown" id="albumItem" data-wow-duration="1000ms" data-wow-delay="600ms" 
+                  *ngFor="let document of documentsJeloltek">
+                          <app-document-item [document]="document"></app-document-item>
+                      </div>
+                      </div>                               
+              </section>
+            </div>
+
+
+         </div>
+        </mat-tab>
+    </mat-tab-group>
+        
+  <app-footer></app-footer>
+
+

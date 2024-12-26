@@ -1,0 +1,33 @@
+@import '~font-awesome/css/font-awesome.css';
+@import "~animate.css/animate.css";
+/* ==== overwrite bootstrap standard ==== */
+
+
+ 
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+   
+//@import url('assets/mainStyle.scss'); 
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.docHeader{
+    padding-bottom: 30px;
+}
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label{
+    color: black !important;
+}
+
+.mat-mdc-tab .mdc-tab__text-label{
+    color: black !important;
+}
+
+::ng-deep .mat-tab-header {
+    overflow-x: scroll !important;
+  }

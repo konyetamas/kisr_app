@@ -1,0 +1,33 @@
+    <header> 
+        <app-nav-bar-child></app-nav-bar-child>
+      </header>
+      <div class="container"> 
+        <div class="row"> 
+
+          <section class="col-3"> 
+          </section>
+          <section class="col-9">  
+              
+              <div  class="row row-cols-3 d-flex g-4 ">  
+                  <div class="col md-6 wow fadeInDown" data-wow-duration="5000ms" data-wow-delay="600ms"  *ngFor="let image of images">
+                    <app-image-item [image]="image"></app-image-item>
+                  </div>
+                </div>
+     
+        </section> 
+    
+  
+        <div class="d-flex ">   
+          <button type="button" id="backButton"  routerLink="../../galeria" class="btn btn-outline-secondary">Vissza</button>
+        </div>  
+
+        <div class="d-flex justify-content-center"> 
+    
+            <pagination [totalItems]="totalItems" [itemsPerPage]="1" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>  
+        </div>
+
+      </div>
+        </div> 
+
+      <app-footer></app-footer> 
+

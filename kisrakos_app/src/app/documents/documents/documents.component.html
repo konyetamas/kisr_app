@@ -1,0 +1,102 @@
+
+    <header>
+      <app-nav-bar></app-nav-bar>
+    </header>
+    
+      
+      <mat-tab-group>
+        <mat-tab label="Általános"> 
+          <div style="height: 50px;"></div>
+          <div class="container">
+
+          <div class="row"> 
+            <section class="col-3">  
+            </section>
+            <section class="col-9"> 
+              <div class="docHeader" >
+                 <h2>Hirdetmények</h2> 
+              </div>
+              <div  class="row row-cols-3 d-flex g-4 ">  
+                <div class="col md-6 wow fadeInDown" id="albumItem" data-wow-duration="1000ms" data-wow-delay="600ms" 
+                *ngFor="let document of documents">
+                      <app-document-item [document]="document"></app-document-item>
+                    </div>
+                  </div>
+                  <div class="docHeader" >
+                    <h2>Választás 2019</h2>
+                 </div>
+                  <div  class="row row-cols-3 d-flex g-4 ">  
+                    <div class="col md-6 wow fadeInDown" id="albumItem" data-wow-duration="1000ms" data-wow-delay="600ms" 
+                    *ngFor="let document of documentsVal">
+                          <app-document-item [document]="document"></app-document-item>
+                        </div>
+                  </div>
+                         
+          </section>
+    
+          </div>
+        </div>
+        
+        
+        </mat-tab>
+        <mat-tab label="Szervezeti, személyzeti adatok" >
+          <div style="height: 50px;"></div>
+          <div class="container">
+            <app-basic-datas></app-basic-datas>
+        </div>
+        </mat-tab>
+        <mat-tab label="Tevékenységre, működésre vonatkozó adatok" > 
+          <div style="height: 50px;"></div>
+          <div class="container">
+            <app-activity-datas></app-activity-datas>
+        </div>
+        </mat-tab>
+        <mat-tab label="Gazdálkodási adatok" >
+          <div style="height: 50px;"></div>
+          <div class="container">
+
+            <mat-tab-group>
+              <mat-tab label="Költségvetések" >  </mat-tab>
+              <mat-tab label="Szerződések" >  </mat-tab>
+              <mat-tab label="Támogatások" >  </mat-tab>
+              <mat-tab label="Zárszámadások" >  </mat-tab>
+
+            </mat-tab-group>
+            <div style="height: 50px;"></div>
+
+          <h2>Fejlesztés alatt</h2>
+        </div>
+        </mat-tab>
+        <mat-tab label="Közbeszerzés" >
+          <div style="height: 50px;"></div>
+          <div class="container">
+
+            <mat-tab-group>
+              <mat-tab label="Éves statisztikai összegzések" >  </mat-tab>
+              <mat-tab label="Közbeszerzési tervek" >  </mat-tab>
+              <mat-tab label="Szerződések" >  </mat-tab>
+              <mat-tab label="Szerződésekre vonatkozó adatok" >  </mat-tab>
+
+            </mat-tab-group>
+            <div style="height: 50px;"></div>
+
+          <h2>Fejlesztés alatt</h2>
+        </div>
+        </mat-tab>
+
+        <mat-tab label="Közadatkereső">
+          <div style="height: 50px;"></div>
+          <div class="container">
+
+          <h2>https://kozadat.hu/kereso/</h2>
+        </div>
+        </mat-tab>
+
+      </mat-tab-group>
+          
+  
+ 
+    <app-footer></app-footer>
+
+
+ 

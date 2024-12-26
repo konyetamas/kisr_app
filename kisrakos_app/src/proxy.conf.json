@@ -1,0 +1,9 @@
+{
+    "/api/*":{ 
+        "target" : "https://kisrakosweb-001-site1.ftempurl.com", 
+        "secure" : false, 
+        "loglevel" : "debug"
+    } 
+} 
+
+
